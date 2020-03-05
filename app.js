@@ -2,6 +2,7 @@
 const fs = require("fs");
 const axios = require("axios");
 const cheerio = require("cheerio");
+
 let url = "";
 const naratorHaditsPaths = [
   "/dawud/",
@@ -14,9 +15,7 @@ const naratorHaditsPaths = [
 
 let naratorIndex = 0;
 let haditsNumber = 1;
-
-fetchDetailUrl();
-
+//fetchDetailUrl();
 let listOfHadits = [];
 function fetchDetailUrl() {
   naratorPath = naratorHaditsPaths[naratorIndex];
@@ -66,7 +65,6 @@ function fetchDetailUrl() {
     });
   }
 }
-
 async function fetchData(url) {
   console.log("=================================");
   console.log("Crawl...");
